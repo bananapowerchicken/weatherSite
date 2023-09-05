@@ -3,3 +3,4 @@ flake8==5.0.4
 
 atomicwrites==1.4.1
 Django==3.2
+requests
