@@ -19,7 +19,25 @@
           <a class="me-3 py-2 link-body-emphasis text-decoration-none" href="#">Информация</a>
         </nav>
         <a class="btn btn-outline-primary" href="#">Документашка</a>
+    </div>    
+    <div class="container">
+        <div class="row">
+            <div class="col-5 offset-2">
+                <h1> Погода в вашем городе </h1> 
+                <form action="">
+                    <label for="city">Город</label>
+                    <input type="text" id="city" class="form-control" name="city"
+                    placeholder="Введите город">
+                    <input type="submit" name="send" value="Узнать" class="mt-2 btn-danger">
+                </form>                
+            </div>
+            <div class="col-4 offset-1">
+                <h1> Информация </h1> 
+                <div class="alert alert-danger">
+                    Погода где-то
+                </div>
+            </div>
+        </div>
     </div>
-    <h1> Погодный сайт </h1>
 </body>
 </html>
