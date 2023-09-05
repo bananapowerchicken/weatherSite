@@ -1,13 +1,21 @@
 from django.shortcuts import render
 import requests
 from .models import City
+from .forms import CityForm
 
 def index(request):
     appid = '5f2887a8ea1643c8f436a30eeeec5f6e'
     # units=metric чтобы данные в цельсии
     url = 'https://api.openweathermap.org/data/2.5/weather?q={}&units=metric&appid=' + appid
 
-    # city = 'Moscow'
+    # условие сохранения данных (нового города)
+    if (request.method == 'POST'):
+        form = CityForm(request.POST)
+        form.save()
+    
+    # очистка формы
+    form = CityForm()  
+
     cities = City.objects.all()
     all_cities = []
 
@@ -25,7 +33,8 @@ def index(request):
 
     # передаем эти данные в шаблон index.html
     context = {
-        'all_info': all_cities
+        'all_info': all_cities,
+        'form': form,
     }
 
     return render(request, 'weather/index.html', context)  # по умолчанию все шаблоны
