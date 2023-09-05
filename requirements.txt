@@ -1,0 +1,5 @@
+djangorestframework==3.12.4
+flake8==5.0.4
+
+atomicwrites==1.4.1
+Django==3.2
