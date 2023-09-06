@@ -1,2 +1,1 @@
-# weatherSite
-Site to find out the weather in your city
+https://www.youtube.com/watch?v=lsAbq2RcWlQ&t=863s
