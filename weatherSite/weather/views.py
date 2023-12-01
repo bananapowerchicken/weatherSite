@@ -43,7 +43,7 @@ def index(request):
 #     return render(request, 'weather/index.html', context)  # по умолчанию все шаблоны
 # # ищутся в папке templates
 
-    city = 'Munich'
+    city = 'Izmir'
 
     res = requests.get(url.format(city)).json()
     print(res)
